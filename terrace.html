@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>THE TERACE CAFE | Near SMJN PG College</title>
+  <style>
+    :root {
+      --primary: #3e2723;
+      --secondary: #ff7043;
+      --bg: #fff8f0;
+      --text: #222;
+      --accent: #388e3c;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 1.5rem 0 1rem 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: var(--secondary);
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 16px;
+    }
+    section {
+      margin-bottom: 45px;
+      padding: 24px 18px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px #eee;
+    }
+    h1, h2 {
+      color: var(--primary);
+      margin-top: 0;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1000&q=80') center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 80px 16px 60px 16px;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+      text-shadow: 1px 1px 3px #222;
+    }
+    .cta-btn {
+      background: var(--secondary);
+      color: #fff;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 24px;
+      font-size: 1.1rem;
+      margin: 12px 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-weight: bold;
+    }
+    .cta-btn:hover {
+      background: var(--accent);
+    }
+    /* Menu Section */
+    .menu-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .menu-item {
+      flex: 1 1 220px;
+      background: #fbe9e7;
+      border-radius: 10px;
+      padding: 14px;
+      text-align: center;
+      box-shadow: 0 1px 4px #ddd;
+    }
+    .menu-item img {
+      width: 100%;
+      max-width: 140px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .menu-item h3 {
+      margin: 8px 0 4px 0;
+      color: var(--secondary);
+    }
+    .menu-item p {
+      margin: 0 0 6px 0;
+      font-size: 0.98rem;
+    }
+    .menu-item .price {
+      color: var(--accent);
+      font-weight: bold;
+    }
+    /* Gallery */
+    .gallery {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 180px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px #ccc;
+    }
+    /* About/Testimonials */
+    .testimonials {
+      margin-top: 18px;
+      font-style: italic;
+      color: #555;
+    }
+    /* Contact */
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .contact-details {
+      flex: 1 1 220px;
+    }
+    .contact-map {
+      flex: 1 1 320px;
+      min-width: 200px;
+    }
+    .social-links a {
+      margin-right: 12px;
+      color: var(--secondary);
+      font-size: 1.4rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .social-links a:hover {
+      color: var(--accent);
+    }
+    /* Responsive */
+    @media (max-width: 700px) {
+      .menu-list, .gallery, .contact-info {
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero {
+        padding: 50px 8px 40px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>THE TERACE CAFE</h1>
+    <div>Near SMJN PG College</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#reservations">Reservations</a>
+      <a href="#order">Order</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <section id="home" class="hero">
+      <h1>Welcome to THE TERACE CAFE</h1>
+      <p>Enjoy delicious food and a beautiful terrace atmosphere, just steps from SMJN PG College.</p>
+      <button class="cta-btn" onclick="scrollToSection('reservations')">Reserve Table</button>
+      <button class="cta-btn" onclick="scrollToSection('order')">Order Online</button>
+      <div style="margin-top:18px;font-size:1.1rem;background:rgba(255,255,255,0.13);padding:6px 18px;border-radius:8px;display:inline-block;">
+        <b>Special Offer:</b> 10% off for college students!
+      </div>
+    </section>
+
+    <section id="menu">
+      <h2>Our Menu</h2>
+      <div class="menu-list">
+        <div class="menu-item">
+          <img src="https://images.unsplash.com/photo-1516685018646-5499d0a7e0c3?auto=format&fit=crop&w=400&q=80" alt="Veg Platter">
+          <h3>Veg Platter</h3>
+          <p>Assorted seasonal veggies, grilled to perfection.</p>
+          <div class="price">₹199</div>
+        </div>
+        <div class="menu-item">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Paneer Tikka">
+          <h3>Paneer Tikka</h3>
+          <p>Soft paneer cubes marinated with spices and grilled.</p>
+          <div class="price">₹179</div>
+        </div>
+        <div class="menu-item">
+          <img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" alt="Cold Coffee">
+          <h3>Cold Coffee</h3>
+          <p>Chilled, creamy coffee – perfect for summer days.</p>
+          <div class="price">₹89</div>
+        </div>
+        <div class="menu-item">
+          <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" alt="Club Sandwich">
+          <h3>Club Sandwich</h3>
+          <p>Triple-layered sandwich with fresh veggies and cheese.</p>
+          <div class="price">₹129</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        THE TERACE CAFE was founded by food lovers for food lovers. Our mission is to serve fresh, delicious food in a cozy terrace setting, creating memorable moments for students and families alike. Our team is passionate about great taste and warm hospitality.
+      </p>
+      <div class="testimonials">
+        <b>“Best cafe near SMJN PG College! Love the ambience and food.”</b> – Priya S.<br>
+        <b>“Excellent service and amazing coffee.”</b> – Rahul K.
+      </div>
+    </section>
+
+    <section id="reservations">
+      <h2>Reserve a Table</h2>
+      <form id="reserveForm" autocomplete="off" style="max-width:350px;margin:auto;">
+        <label>Name:<br>
+          <input type="text" name="name" required style="width:100%;padding:7px;margin:5px 0;">
+        </label><br>
+        <label>Date:<br>
+          <input type="date" name="date" required style="width:100%;padding:7px;margin:5px 0;">
+        </label><br>
+        <label>Time:<br>
+          <input type="time" name="time" required style="width:100%;padding:7px;margin:5px 0;">
+        </label><br>
+        <label>Guests:<br>
+          <input type="number" name="guests" min="1" max="20" required style="width:100%;padding:7px;margin:5px 0;">
+        </label><br>
+        <button type="submit" class="cta-btn">Book Now</button>
+        <div id="reserveMsg" style="margin-top:10px;color:var(--accent);"></div>
+      </form>
+    </section>
+
+    <section id="order">
+      <h2>Order Online</h2>
+      <form id="orderForm" autocomplete="off" style="max-width:350px;margin:auto;">
+        <label>Dish:<br>
+          <select name="dish" required style="width:100%;padding:7px;margin:5px 0;">
+            <option value="">Select</option>
+            <option value="Veg Platter">Veg Platter</option>
+            <option value="Paneer Tikka">Paneer Tikka</option>
+            <option value="Cold Coffee">Cold Coffee</option>
+            <option value="Club Sandwich">Club Sandwich</option>
+          </select>
+        </label><br>
+        <label>Quantity:<br>
+          <input type="number" name="qty" min="1" max="10" required style="width:100%;padding:7px;margin:5px 0;">
+        </label><br>
+        <label>Phone:<br>
+          <input type="tel" name="phone" required pattern="[0-9]{10}" style="width:100%;padding:7px;margin:5px 0;">
+        </label><br>
+        <button type="submit" class="cta-btn">Place Order</button>
+        <div id="orderMsg" style="margin-top:10px;color:var(--accent);"></div>
+      </form>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Terrace View">
+        <img src="https://images.unsplash.com/photo-1516685018646-5499d0a7e0c3?auto=format&fit=crop&w=400&q=80" alt="Food">
+        <img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" alt="Coffee">
+        <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" alt="Sandwich">
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+        <div class="contact-details">
+          <b>Address:</b><br>
+          Near SMJN PG College, Haridwar, Uttarakhand<br>
+          <b>Phone:</b> +91-9876543210<br>
+          <b>Email:</b> terracecafe@email.com<br>
+          <b>Opening Hours:</b><br>
+          Mon-Sun: 9:00 AM – 10:00 PM<br>
+          <div class="social-links" style="margin-top:10px;">
+            <a href="#" title="Instagram">&#x1F4F7;</a>
+            <a href="#" title="Facebook">&#x1F426;</a>
+            <a href="#" title="WhatsApp">&#x1F4F1;</a>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe src="https://www.google.com/maps?q=SMJN+PG+College,+Haridwar&output=embed" width="100%" height="180" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+    // Smooth scroll to section
+    function scrollToSection(id) { 
+        
+      document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+    }
+    // Reservation form handler
+    document.getElementById('reserveForm').onsubmit = function(e) {
+      e.preventDefault();
+      document.getElementById('reserveMsg').textContent = "Thank you! Your table has been reserved.";
+      this.reset();
+    };
+    // Order form handler
+    document.getElementById('orderForm').onsubmit = function(e) {
+      e.preventDefault();
+      document.getElementById('orderMsg').textContent = "Order placed! We'll contact you soon.";
+      this.reset();
+    };
+  </script>
+</body>
+</html>
